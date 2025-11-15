@@ -108,7 +108,7 @@ const HomePage = () => {
           ></iframe>
 
           <div className="latest-cards">
-            {products.map((product, index) => {
+            {products.slice(0, 3).map((product, index) => {
               const imgs = [LatestCard, CarSvg, DoctorSvg];
               return (
                 <div
