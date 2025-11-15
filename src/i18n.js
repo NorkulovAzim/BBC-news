@@ -27,6 +27,7 @@ const resources = {
       addNews: "News added",
       clickToSave: "Click to save",
       removeNews: "Remove News",
+      price: "Price",
     },
   },
   uz: {
@@ -55,6 +56,7 @@ const resources = {
       addNews: "Yangilik qo'shilgan",
       clickToSave: "Saqlash",
       removeNews: "Olib tashlash",
+      price: "Narxi",
     },
   },
   ru: {
@@ -82,6 +84,7 @@ const resources = {
       addNews: "Новости добавлены",
       clickToSave: "Сохранять",
       removeNews: "Удалить новости",
+      price: "Цена",
     },
   },
 };

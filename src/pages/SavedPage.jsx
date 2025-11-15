@@ -53,7 +53,9 @@ const SavedPage = () => {
               style={{ width: "300px", borderRadius: "6px" }}
             />
             <p>{item.description}</p>
-            <p>Price: ${item.price}</p>
+            <p>
+              {t("price")}: ${item.price}
+            </p>
           </div>
         ))}
       </div>
