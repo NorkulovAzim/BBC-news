@@ -26,6 +26,7 @@ const resources = {
       savedFull: "Saved News",
       addNews: "News added",
       clickToSave: "Click to save",
+      removeNews: "Remove News",
     },
   },
   uz: {
@@ -53,6 +54,7 @@ const resources = {
       savedFull: "Saqlangan yangiliklar",
       addNews: "Yangilik qo'shilgan",
       clickToSave: "Saqlash",
+      removeNews: "Olib tashlash",
     },
   },
   ru: {
@@ -79,6 +81,7 @@ const resources = {
       savedFull: "Сохраненные новости",
       addNews: "Новости добавлены",
       clickToSave: "Сохранять",
+      removeNews: "Удалить новости",
     },
   },
 };

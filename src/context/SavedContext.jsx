@@ -11,8 +11,12 @@ export const SavedProvider = ({ children }) => {
     }
   };
 
+  const removeSaved = (id) => {
+    setSavedItems(savedItems.filter((item) => item.id !== id));
+  };
+
   return (
-    <SavedContext.Provider value={{ savedItems, addToSaved }}>
+    <SavedContext.Provider value={{ savedItems, addToSaved, removeSaved }}>
       {children}
     </SavedContext.Provider>
   );

@@ -478,3 +478,34 @@ footer {
 .nosaved-section {
   min-height: 50vh;
 }
+
+.saved-news-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.saved-news-title button {
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.31);
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.saved-news-title button:hover {
+  color: rgba(252, 106, 106, 0.901);
+  border: 1px solid rgba(252, 106, 106, 0.901);
+}
+
+.saved-news-title button i {
+  pointer-events: none;
+}

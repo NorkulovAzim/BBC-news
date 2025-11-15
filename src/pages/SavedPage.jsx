@@ -18,7 +18,7 @@ import { useSaved } from "../context/SavedContext";
 import { useTranslation } from "react-i18next";
 
 const SavedPage = () => {
-  const { savedItems } = useSaved();
+  const { savedItems, removeSaved } = useSaved();
   const { t } = useTranslation();
 
   if (savedItems.length === 0) {
@@ -38,7 +38,15 @@ const SavedPage = () => {
 
         {savedItems.map((item) => (
           <div key={item.id} style={{ marginBottom: "20px" }}>
-            <h3>{item.title}</h3>
+            <h3 className="saved-news-title">
+              {item.title}
+
+              <button onClick={() => removeSaved(item.id)}>
+                {t("removeNews")}
+                <i className="fa-solid fa-delete-left"></i>
+              </button>
+            </h3>
+
             <img
               src={item.images?.[0]}
               alt={item.title}
