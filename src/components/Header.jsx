@@ -4,8 +4,12 @@ import GlobeImg from "../assets/Globe.svg";
 import MainLogo from "../assets/MainLogo.svg";
 import SavedIcon from "../assets/saved.svg";
 
+import { useSaved } from "../context/SavedContext";
+
 const Header = () => {
   const { t } = useTranslation();
+
+  const { savedItems } = useSaved();
 
   const today = new Date().toLocaleDateString("en-US", {
     weekday: "long",
@@ -33,7 +37,7 @@ const Header = () => {
 
           <div className="savedNews">
             <NavLink to="/saved">
-              {t("saved")}
+              {t("saved")} ({savedItems.length})
               <img src={SavedIcon} alt="" />
             </NavLink>
           </div>

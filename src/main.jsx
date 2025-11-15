@@ -3,9 +3,12 @@ import "./index.css";
 import App from "./App.jsx";
 import "./i18n.js";
 import { BrowserRouter } from "react-router-dom";
+import { SavedProvider } from "./context/SavedContext.jsx"; // ← ADD THIS
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <App />
+    <SavedProvider>
+      <App />
+    </SavedProvider>
   </BrowserRouter>
 );

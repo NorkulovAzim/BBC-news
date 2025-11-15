@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useSaved } from "../context/SavedContext";
+
 import axios from "axios";
 import SavedIcon from "../assets/saved.svg";
 
 const DetailedPage = () => {
+  const { addToSaved } = useSaved();
+
   const [product, setProduct] = useState(null);
   const { id } = useParams();
 
@@ -33,7 +37,7 @@ const DetailedPage = () => {
       <div className="container">
         <div className="detailed-title">
           <h1>{product.title}</h1>
-          <button>
+          <button onClick={() => addToSaved(product)}>
             <img src={SavedIcon} alt="" />
           </button>
         </div>
