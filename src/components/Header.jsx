@@ -10,8 +10,9 @@ const Header = () => {
   const { t } = useTranslation();
 
   const { savedItems } = useSaved();
+  const { i18n } = useTranslation();
 
-  const today = new Date().toLocaleDateString("en-US", {
+  const today = new Date().toLocaleDateString(i18n.language, {
     weekday: "long",
     year: "numeric",
     month: "long",
@@ -32,13 +33,12 @@ const Header = () => {
             <NavLink to="/">{t("business")}</NavLink>
             <NavLink to="/">{t("technology")}</NavLink>
             <NavLink to="/">{t("sports")}</NavLink>
-            <NavLink to="/">{t("culture")}</NavLink>
           </div>
 
           <div className="savedNews">
             <NavLink to="/saved">
-              {t("saved")} ({savedItems.length})
               <img src={SavedIcon} alt="" />
+              {t("saved")} ({savedItems.length})
             </NavLink>
           </div>
           <div className="date">

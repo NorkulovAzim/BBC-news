@@ -22,6 +22,8 @@ const resources = {
       technoNews: "Technology News",
       otherNews: "Other News",
       culture1: "Culture",
+      loading: "Loading...",
+      savedFull: "Saved News",
     },
   },
   uz: {
@@ -45,6 +47,8 @@ const resources = {
       technoNews: "Texnologik yangiliklar",
       otherNews: "Boshqa yangiliklar",
       culture1: "Madaniyat",
+      loading: "Yuklanmoqda...",
+      savedFull: "Saqlangan yangiliklar",
     },
   },
   ru: {
@@ -67,6 +71,8 @@ const resources = {
       technoNews: "Новости ТЕХНОЛОГИЙ",
       otherNews: "Другие новости",
       culture1: "Культура",
+      loading: "Загрузка...",
+      savedFull: "Сохраненные новости",
     },
   },
 };

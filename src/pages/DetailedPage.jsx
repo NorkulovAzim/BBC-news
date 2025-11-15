@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSaved } from "../context/SavedContext";
+import { useTranslation } from "react-i18next";
 
 import axios from "axios";
 import SavedIcon from "../assets/saved.svg";
 
 const DetailedPage = () => {
   const { addToSaved } = useSaved();
+
+  const { t } = useTranslation();
 
   const [product, setProduct] = useState(null);
   const { id } = useParams();
@@ -26,7 +29,7 @@ const DetailedPage = () => {
     return (
       <section>
         <div className="container">
-          <p>Loading...</p>
+          <p>{t("loading")}</p>
         </div>
       </section>
     );

@@ -34,7 +34,7 @@ const SavedPage = () => {
   return (
     <section>
       <div className="container">
-        <h2>{t("saved")}</h2>
+        <h2 className="saved-news">{t("savedFull")}</h2>
 
         {savedItems.map((item) => (
           <div key={item.id} style={{ marginBottom: "20px" }}>

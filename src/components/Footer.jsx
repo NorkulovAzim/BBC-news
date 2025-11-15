@@ -10,7 +10,6 @@ const Footer = () => {
   const { t } = useTranslation();
   const [currentLanguage, setCurrentLanguage] = useState("en");
 
-  // Load language from localStorage on initial render
   useEffect(() => {
     const loadLanguage = () => {
       const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
@@ -25,7 +24,6 @@ const Footer = () => {
     setCurrentLanguage(selectedLanguage);
     localStorage.setItem("selectedLanguage", selectedLanguage);
 
-    // Change language using i18next
     i18n.changeLanguage(selectedLanguage);
   };
 

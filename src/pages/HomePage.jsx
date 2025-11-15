@@ -62,7 +62,7 @@ const HomePage = () => {
               </div>
             ))
           ) : (
-            <p>Loading news...</p>
+            <p>{t("loading")}</p>
           )}
         </div>
 
@@ -145,7 +145,7 @@ const HomePage = () => {
               onClick={() => handleNewsClick(product.id)}
               style={{ cursor: "pointer" }}
             >
-              <img src={product.images?.[0]} alt={product.title} />
+              <img src={CarSvg} alt={product.title} />
               <p>
                 {product.title} - {today}
               </p>
@@ -174,7 +174,7 @@ const HomePage = () => {
               onClick={() => handleNewsClick(podcast.id)}
               style={{ cursor: "pointer" }}
             >
-              <img src={podcast.images?.[0]} alt={podcast.title} />
+              <img src={TechnoSvg} alt={podcast.title} />
               <div className="podcast-description">
                 <p>{podcast.title}</p>
                 <p>{podcast.description}</p>
