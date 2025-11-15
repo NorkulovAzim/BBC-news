@@ -42,7 +42,7 @@ const SavedPage = () => {
             <img
               src={item.images?.[0]}
               alt={item.title}
-              style={{ width: "150px", borderRadius: "6px" }}
+              style={{ width: "300px", borderRadius: "6px" }}
             />
             <p>{item.description}</p>
             <p>Price: ${item.price}</p>
