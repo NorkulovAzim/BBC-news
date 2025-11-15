@@ -1,24 +1,21 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const DetailedPage = () => {
   const [product, setProduct] = useState(null);
-  const location = useLocation();
-
-  const queryParams = new URLSearchParams(location.search);
-  const productId = queryParams.get("id");
+  const { id } = useParams();
 
   useEffect(() => {
-    if (productId) {
+    if (id) {
       axios
-        .get(`https://dummyjson.com/products/${productId}`)
+        .get(`https://dummyjson.com/products/${id}`)
         .then((res) => {
           setProduct(res.data);
         })
         .catch((err) => console.error(err));
     }
-  }, [productId]);
+  }, [id]);
 
   if (!product) {
     return (
@@ -43,6 +40,9 @@ const DetailedPage = () => {
         />
         <p>{product.description}</p>
         <p>Price: ${product.price}</p>
+        <p>Category: {product.category}</p>
+        <p>Rating: {product.rating}/5</p>
+        <p>Brand: {product.brand || 'N/A'}</p>
       </div>
     </section>
   );

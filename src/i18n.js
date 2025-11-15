@@ -21,6 +21,7 @@ const resources = {
       viewall: "View All",
       technoNews: "Technology News",
       otherNews: "Other News",
+      culture1: "Culture",
     },
   },
   uz: {
@@ -43,6 +44,7 @@ const resources = {
       viewall: "Barchasi",
       technoNews: "Texnologik yangiliklar",
       otherNews: "Boshqa yangiliklar",
+      culture1: "Madaniyat",
     },
   },
   ru: {
@@ -64,6 +66,7 @@ const resources = {
       viewall: "Просмотреть все",
       technoNews: "Новости ТЕХНОЛОГИЙ",
       otherNews: "Другие новости",
+      culture1: "Культура",
     },
   },
 };

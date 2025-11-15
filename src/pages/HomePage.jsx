@@ -11,9 +11,10 @@ import DoctorSvg from "../assets/doctor.svg";
 import TechnoSvg from "../assets/techno1.svg";
 
 const HomePage = () => {
-  const { t } = useTranslation();
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
+
+  const { t } = useTranslation();
 
   const today = new Date().toLocaleDateString("en-US", {
     year: "numeric",
@@ -33,7 +34,7 @@ const HomePage = () => {
   }, []);
 
   const handleNewsClick = (productId) => {
-    navigate(`/detailed?id=${productId}`);
+    navigate(`/news/${productId}`);
   };
 
   return (
@@ -71,7 +72,7 @@ const HomePage = () => {
 
         <div className="poster-content">
           <div className="poster-status">
-            <p>Culture</p>
+            <p>{t("culture1")}</p>
             <p>Guy Hawkins</p>
           </div>
 
@@ -107,20 +108,20 @@ const HomePage = () => {
           ></iframe>
 
           <div className="latest-cards">
-            <div className="latest-card-1">
-              <img src={LatestCard} alt="" />
-              <p>{products[0]?.description}</p>
-            </div>
-
-            <div className="latest-card-1">
-              <img src={CarSvg} alt="" />
-              <p>{products[0]?.description}</p>
-            </div>
-
-            <div className="latest-card-1">
-              <img src={DoctorSvg} alt="" />
-              <p>{products[0]?.description}</p>
-            </div>
+            {products.map((product, index) => {
+              const imgs = [LatestCard, CarSvg, DoctorSvg];
+              return (
+                <div
+                  key={product.id}
+                  className="latest-card-1"
+                  onClick={() => handleNewsClick(product.id)}
+                  style={{ cursor: "pointer" }}
+                >
+                  <img src={imgs[index % imgs.length]} alt="" />
+                  <p>{product.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -138,8 +139,13 @@ const HomePage = () => {
 
         <div className="technology-news-card">
           {products.map((product) => (
-            <div key={product.id} className="technology-card">
-              <img src={product.images?.[0]} />
+            <div
+              key={product.id}
+              className="technology-card"
+              onClick={() => handleNewsClick(product.id)}
+              style={{ cursor: "pointer" }}
+            >
+              <img src={product.images?.[0]} alt={product.title} />
               <p>
                 {product.title} - {today}
               </p>
@@ -162,7 +168,12 @@ const HomePage = () => {
 
         <div className="podcast-cards">
           {products.slice(0, 3).map((podcast) => (
-            <div key={podcast.id} className="podcast-card-1">
+            <div
+              key={podcast.id}
+              className="podcast-card-1"
+              onClick={() => handleNewsClick(podcast.id)}
+              style={{ cursor: "pointer" }}
+            >
               <img src={podcast.images?.[0]} alt={podcast.title} />
               <div className="podcast-description">
                 <p>{podcast.title}</p>
