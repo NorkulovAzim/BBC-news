@@ -37,6 +37,7 @@ const HomePage = () => {
   return (
     <section className="home-page">
       <div className="container">
+        <h2 className="short-news-title">Short news</h2>
         <div className="short-news">
           {products.length > 0 ? (
             products.map((product) => (
