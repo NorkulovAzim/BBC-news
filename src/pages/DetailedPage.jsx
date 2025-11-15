@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import SavedIcon from "../assets/saved.svg";
 
 const DetailedPage = () => {
   const [product, setProduct] = useState(null);
@@ -32,6 +33,9 @@ const DetailedPage = () => {
       <div className="container">
         <div className="detailed-title">
           <h1>{product.title}</h1>
+          <button>
+            <img src={SavedIcon} alt="" />
+          </button>
         </div>
         <img
           src={product.images?.[0]}
@@ -42,7 +46,7 @@ const DetailedPage = () => {
         <p>Price: ${product.price}</p>
         <p>Category: {product.category}</p>
         <p>Rating: {product.rating}/5</p>
-        <p>Brand: {product.brand || 'N/A'}</p>
+        <p>Brand: {product.brand || "N/A"}</p>
       </div>
     </section>
   );
