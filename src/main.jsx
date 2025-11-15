@@ -3,7 +3,7 @@ import "./index.css";
 import App from "./App.jsx";
 import "./i18n.js";
 import { BrowserRouter } from "react-router-dom";
-import { SavedProvider } from "./context/SavedContext.jsx"; // ← ADD THIS
+import { SavedProvider } from "./context/SavedContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>

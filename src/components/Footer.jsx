@@ -80,7 +80,7 @@ const Footer = () => {
               <NavLink
                 to="/"
                 onClick={() =>
-                  window.open("https://www.instagram.com/bbcnews/", "_blank")
+                  window.open("https://www.instagram.com/bbcnews/")
                 }
               >
                 <i className="fa-brands fa-instagram"></i>
@@ -88,32 +88,26 @@ const Footer = () => {
               <NavLink
                 to="/"
                 onClick={() =>
-                  window.open("https://uk.linkedin.com/company/bbc", "_blank")
+                  window.open("https://uk.linkedin.com/company/bbc")
                 }
               >
                 <i className="fa-brands fa-linkedin"></i>
               </NavLink>
               <NavLink
                 to="/"
-                onClick={() =>
-                  window.open("https://www.youtube.com/@BBC", "_blank")
-                }
+                onClick={() => window.open("https://www.youtube.com/@BBC")}
               >
                 <i className="fa-brands fa-youtube"></i>
               </NavLink>
               <NavLink
                 to="/"
-                onClick={() =>
-                  window.open("https://www.reddit.com/r/bbc/", "_blank")
-                }
+                onClick={() => window.open("https://www.reddit.com/r/bbc/")}
               >
                 <i className="fa-brands fa-twitter"></i>
               </NavLink>
               <NavLink
                 to="/"
-                onClick={() =>
-                  window.open("https://www.reddit.com/r/bbc/", "_blank")
-                }
+                onClick={() => window.open("https://www.reddit.com/r/bbc/")}
               >
                 <i className="fa-brands fa-reddit"></i>
               </NavLink>
