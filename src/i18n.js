@@ -24,6 +24,7 @@ const resources = {
       culture1: "Culture",
       loading: "Loading...",
       savedFull: "Saved News",
+      addNews: "News added",
     },
   },
   uz: {
@@ -49,6 +50,7 @@ const resources = {
       culture1: "Madaniyat",
       loading: "Yuklanmoqda...",
       savedFull: "Saqlangan yangiliklar",
+      addNews: "Yangilik qo'shilgan",
     },
   },
   ru: {
@@ -73,6 +75,7 @@ const resources = {
       culture1: "Культура",
       loading: "Загрузка...",
       savedFull: "Сохраненные новости",
+      addNews: "Новости добавлены",
     },
   },
 };

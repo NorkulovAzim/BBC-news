@@ -14,9 +14,10 @@ const HomePage = () => {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-  const today = new Date().toLocaleDateString("en-US", {
+  const today = new Date().toLocaleDateString(i18n.language, {
+    weekday: "long",
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -50,8 +51,6 @@ const HomePage = () => {
                 onClick={() => handleNewsClick(product.id)}
                 style={{ cursor: "pointer" }}
               >
-
-                
                 {/* <img
                   src={product.images?.[0] || NewsCard}
                   alt={product.title}
@@ -180,7 +179,9 @@ const HomePage = () => {
               <div className="podcast-description">
                 <p>{podcast.title}</p>
                 <p>{podcast.description}</p>
-                <p>{today}</p>
+                <p className="podcast-date">
+                  {t("addNews")}: {today}
+                </p>
               </div>
             </div>
           ))}
