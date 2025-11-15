@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import axios from "axios";
 import NewsCard from "../assets/newsCard.svg";
 import Poster from "../assets/Poster.svg";
@@ -10,6 +11,7 @@ import DoctorSvg from "../assets/doctor.svg";
 import TechnoSvg from "../assets/techno1.svg";
 
 const HomePage = () => {
+  const { t } = useTranslation();
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
 
@@ -37,7 +39,7 @@ const HomePage = () => {
   return (
     <section className="home-page">
       <div className="container">
-        <h2 className="short-news-title">Short news</h2>
+        <h2 className="short-news-title">{t("shortnews")}</h2>
         <div className="short-news">
           {products.length > 0 ? (
             products.map((product) => (
@@ -83,10 +85,10 @@ const HomePage = () => {
         </div>
 
         <div className="latest-news">
-          <h2>Latest News</h2>
+          <h2>{t("hotnews")}</h2>
           <div className="view-all">
             <NavLink to="/">
-              <p>View all</p>
+              <p>{t("viewall")}</p>
               <img src={ArrowSvg} alt="" />
             </NavLink>
           </div>
@@ -126,7 +128,7 @@ const HomePage = () => {
           <h2>TECHNOLOGY News</h2>
           <div className="view-all">
             <NavLink to="/">
-              <p>View all</p>
+              <p>{t("viewall")}</p>
               <img src={ArrowSvg} alt="" />
             </NavLink>
           </div>
@@ -150,7 +152,7 @@ const HomePage = () => {
           <h2>podcasts</h2>
           <div className="view-all">
             <NavLink to="/">
-              <p>View all</p>
+              <p>{t("viewall")}</p>
               <img src={ArrowSvg} alt="" />
             </NavLink>
           </div>

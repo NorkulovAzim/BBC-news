@@ -16,6 +16,9 @@ const resources = {
       copyright: "Copyright © 2024 - The News - All rights reserved",
       nosaved: "No saved news",
       saved: "Saved News",
+      shortnews: "Short News",
+      hotnews: "Latest News",
+      viewall: "View All",
     },
   },
   uz: {
@@ -33,6 +36,9 @@ const resources = {
         "Mualliflik huquqi © 2024 - The News - Barcha huquqlar himoyalangan",
       nosaved: "Saqlangan yangiliklar yo'q",
       saved: "Saqlangan yangiliklar",
+      shortnews: "Qisqa yangiliklar",
+      hotnews: "So'ngi yangiliklar",
+      viewall: "Ko'rish",
     },
   },
   ru: {
@@ -48,7 +54,10 @@ const resources = {
       saved_news: "Сохраненные новости",
       copyright: "Авторские права © 2024 - The News - Все права защищены",
       nosaved: "Нет сохраненных новостей",
-      saved: "Сохраненные новости",
+      saved: "Сох.. новости",
+      shortnews: "Короткие новости",
+      hotnews: "последние новости",
+      viewall: "Просмотреть все",
     },
   },
 };
