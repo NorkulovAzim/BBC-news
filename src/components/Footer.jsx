@@ -77,20 +77,45 @@ const Footer = () => {
             </div>
 
             <div className="footer-social">
-              <NavLink to="/">
-                <i className="fa-brands fa-instagram"></i>{" "}
+              <NavLink
+                to="/"
+                onClick={() =>
+                  window.open("https://www.instagram.com/bbcnews/", "_blank")
+                }
+              >
+                <i className="fa-brands fa-instagram"></i>
               </NavLink>
-              <NavLink to="/">
-                <i className="fa-brands fa-linkedin"></i>{" "}
+              <NavLink
+                to="/"
+                onClick={() =>
+                  window.open("https://uk.linkedin.com/company/bbc", "_blank")
+                }
+              >
+                <i className="fa-brands fa-linkedin"></i>
               </NavLink>
-              <NavLink to="/">
-                <i className="fa-brands fa-youtube"></i>{" "}
+              <NavLink
+                to="/"
+                onClick={() =>
+                  window.open("https://www.youtube.com/@BBC", "_blank")
+                }
+              >
+                <i className="fa-brands fa-youtube"></i>
               </NavLink>
-              <NavLink to="/">
-                <i className="fa-brands fa-twitter"></i>{" "}
+              <NavLink
+                to="/"
+                onClick={() =>
+                  window.open("https://www.reddit.com/r/bbc/", "_blank")
+                }
+              >
+                <i className="fa-brands fa-twitter"></i>
               </NavLink>
-              <NavLink to="/">
-                <i className="fa-brands fa-reddit"></i>{" "}
+              <NavLink
+                to="/"
+                onClick={() =>
+                  window.open("https://www.reddit.com/r/bbc/", "_blank")
+                }
+              >
+                <i className="fa-brands fa-reddit"></i>
               </NavLink>
             </div>
           </div>
