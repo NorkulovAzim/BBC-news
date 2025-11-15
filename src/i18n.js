@@ -19,6 +19,8 @@ const resources = {
       shortnews: "Short News",
       hotnews: "Latest News",
       viewall: "View All",
+      technoNews: "Technology News",
+      otherNews: "Other News",
     },
   },
   uz: {
@@ -38,7 +40,9 @@ const resources = {
       saved: "Saqlangan yangiliklar",
       shortnews: "Qisqa yangiliklar",
       hotnews: "So'ngi yangiliklar",
-      viewall: "Ko'rish",
+      viewall: "Barchasi",
+      technoNews: "Texnologik yangiliklar",
+      otherNews: "Boshqa yangiliklar",
     },
   },
   ru: {
@@ -58,6 +62,8 @@ const resources = {
       shortnews: "Короткие новости",
       hotnews: "последние новости",
       viewall: "Просмотреть все",
+      technoNews: "Новости ТЕХНОЛОГИЙ",
+      otherNews: "Другие новости",
     },
   },
 };

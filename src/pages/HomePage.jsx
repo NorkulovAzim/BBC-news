@@ -125,7 +125,7 @@ const HomePage = () => {
         </div>
 
         <div className="technology-news">
-          <h2>TECHNOLOGY News</h2>
+          <h2>{t("technoNews")}</h2>
           <div className="view-all">
             <NavLink to="/">
               <p>{t("viewall")}</p>
@@ -149,7 +149,7 @@ const HomePage = () => {
         </div>
 
         <div className="podcast">
-          <h2>podcasts</h2>
+          <h2>{t("otherNews")}</h2>
           <div className="view-all">
             <NavLink to="/">
               <p>{t("viewall")}</p>
