@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
-import SavedIcon from "../assets/saved.svg";
 
 const DetailedPage = () => {
   const [product, setProduct] = useState(null);
@@ -36,9 +35,6 @@ const DetailedPage = () => {
       <div className="container">
         <div className="detailed-title">
           <h1>{product.title}</h1>
-          <button>
-            <img src={SavedIcon} alt="" />
-          </button>
         </div>
         <img
           src={product.images?.[0]}

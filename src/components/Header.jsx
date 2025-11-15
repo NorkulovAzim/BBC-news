@@ -1,9 +1,12 @@
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import GlobeImg from "../assets/Globe.svg";
 import MainLogo from "../assets/MainLogo.svg";
 import SavedIcon from "../assets/saved.svg";
 
 const Header = () => {
+  const { t } = useTranslation();
+
   const today = new Date().toLocaleDateString("en-US", {
     weekday: "long",
     year: "numeric",
@@ -20,17 +23,17 @@ const Header = () => {
           </NavLink>
 
           <div className="header-links">
-            <NavLink to="/">World News</NavLink>
-            <NavLink to="/">Politics</NavLink>
-            <NavLink to="/">Business</NavLink>
-            <NavLink to="/">Technology</NavLink>
-            <NavLink to="/">Sports</NavLink>
-            <NavLink to="/">Culture</NavLink>
+            <NavLink to="/">{t("world_news")}</NavLink>
+            <NavLink to="/">{t("politics")}</NavLink>
+            <NavLink to="/">{t("business")}</NavLink>
+            <NavLink to="/">{t("technology")}</NavLink>
+            <NavLink to="/">{t("sports")}</NavLink>
+            <NavLink to="/">{t("culture")}</NavLink>
           </div>
 
           <div className="savedNews">
             <NavLink to="/saved">
-              Saved News
+              {t("saved")}
               <img src={SavedIcon} alt="" />
             </NavLink>
           </div>

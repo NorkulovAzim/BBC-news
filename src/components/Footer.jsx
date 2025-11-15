@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import MainLogo from "../assets/MainLogo.svg";
 import BBC from "../assets/bbc.svg";
 import BBCwhite from "../assets/bbc-white.png";
+import i18n from "../i18n";
 
 const Footer = () => {
+  const { t } = useTranslation();
+  const [currentLanguage, setCurrentLanguage] = useState("en");
+
+  // Load language from localStorage on initial render
+  useEffect(() => {
+    const loadLanguage = () => {
+      const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
+      setCurrentLanguage(savedLanguage);
+    };
+
+    loadLanguage();
+  }, []);
+
+  const handleLanguageChange = (event) => {
+    const selectedLanguage = event.target.value;
+    setCurrentLanguage(selectedLanguage);
+    localStorage.setItem("selectedLanguage", selectedLanguage);
+
+    // Change language using i18next
+    i18n.changeLanguage(selectedLanguage);
+  };
+
   return (
     <footer>
       <div className="container">
@@ -13,22 +37,27 @@ const Footer = () => {
         </NavLink> */}
         <div className="footer-content">
           <div className="footer-links">
-            <NavLink to="/">World News</NavLink>
-            <NavLink to="/">Politics</NavLink>
-            <NavLink to="/">Business</NavLink>
-            <NavLink to="/">Technology</NavLink>
-            <NavLink to="/">Sports</NavLink>
-            <NavLink to="/">Culture</NavLink>
-            <NavLink to="/">Health</NavLink>
-            <NavLink to="/">Science</NavLink>
+            <NavLink to="/">{t("world_news")}</NavLink>
+            <NavLink to="/">{t("politics")}</NavLink>
+            <NavLink to="/">{t("business")}</NavLink>
+            <NavLink to="/">{t("technology")}</NavLink>
+            <NavLink to="/">{t("sports")}</NavLink>
+            <NavLink to="/">{t("culture")}</NavLink>
+            <NavLink to="/">{t("health")}</NavLink>
+            <NavLink to="/">{t("science")}</NavLink>
 
             <div className="footer-languages">
-              <select className="language-select" defaultValue="bbc">
+              <select
+                className="language-select"
+                value={currentLanguage}
+                onChange={handleLanguageChange}
+              >
                 <option value="bbc" disabled>
                   BBC in other languages
                 </option>
                 <option value="en">English</option>
                 <option value="uz">O‘zbek</option>
+                <option value="ru">Русский</option>
               </select>
             </div>
           </div>
@@ -46,7 +75,7 @@ const Footer = () => {
           <div className="footer-copyright">
             <div className="copyright-text">
               <i className="fa-regular fa-copyright"></i>{" "}
-              <p>Copyright © 2024 - The News - All rights reserved</p>
+              <p>{t("copyright")}</p>
             </div>
 
             <div className="footer-social">

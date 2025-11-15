@@ -37,9 +37,6 @@ const HomePage = () => {
   return (
     <section className="home-page">
       <div className="container">
-        <div>
-          <h2 className="short-news-title">Short News</h2>
-        </div>
         <div className="short-news">
           {products.length > 0 ? (
             products.map((product) => (
@@ -49,6 +46,10 @@ const HomePage = () => {
                 onClick={() => handleNewsClick(product.id)}
                 style={{ cursor: "pointer" }}
               >
+                {/* <img
+                  src={product.images?.[0] || NewsCard}
+                  alt={product.title}
+                /> */}
                 <img src={NewsCard} alt="" />
                 <div className="news-content">
                   <h2>{product.title}</h2>
@@ -70,6 +71,7 @@ const HomePage = () => {
             <p>Culture</p>
             <p>Guy Hawkins</p>
           </div>
+
           <div className="poster-date">
             <p>{today}</p>
           </div>
@@ -88,7 +90,9 @@ const HomePage = () => {
             </NavLink>
           </div>
         </div>
+
         <div className="latest-line"></div>
+
         <div className="latest-news-card">
           <iframe
             width="100%"
@@ -100,20 +104,20 @@ const HomePage = () => {
           ></iframe>
 
           <div className="latest-cards">
-            {products.slice(0, 3).map((product, index) => {
-              const imgs = [LatestCard, CarSvg, DoctorSvg];
-              return (
-                <div
-                  key={product.id}
-                  className="latest-card-1"
-                  onClick={() => handleNewsClick(product.id)}
-                  style={{ cursor: "pointer" }}
-                >
-                  <img src={imgs[index]} alt="" />
-                  <p>{product.description}</p>
-                </div>
-              );
-            })}
+            <div className="latest-card-1">
+              <img src={LatestCard} alt="" />
+              <p>{products[0]?.description}</p>
+            </div>
+
+            <div className="latest-card-1">
+              <img src={CarSvg} alt="" />
+              <p>{products[0]?.description}</p>
+            </div>
+
+            <div className="latest-card-1">
+              <img src={DoctorSvg} alt="" />
+              <p>{products[0]?.description}</p>
+            </div>
           </div>
         </div>
 
@@ -126,16 +130,13 @@ const HomePage = () => {
             </NavLink>
           </div>
         </div>
+
         <div className="technology-line"></div>
+
         <div className="technology-news-card">
           {products.map((product) => (
-            <div
-              key={product.id}
-              className="technology-card"
-              onClick={() => handleNewsClick(product.id)}
-              style={{ cursor: "pointer" }}
-            >
-              <img src={product.images?.[0]} alt={product.title} />
+            <div key={product.id} className="technology-card">
+              <img src={product.images?.[0]} />
               <p>
                 {product.title} - {today}
               </p>
@@ -145,7 +146,7 @@ const HomePage = () => {
         </div>
 
         <div className="podcast">
-          <h2>Podcasts</h2>
+          <h2>podcasts</h2>
           <div className="view-all">
             <NavLink to="/">
               <p>View all</p>
@@ -153,15 +154,12 @@ const HomePage = () => {
             </NavLink>
           </div>
         </div>
+
         <div className="podcast-line"></div>
+
         <div className="podcast-cards">
           {products.slice(0, 3).map((podcast) => (
-            <div
-              key={podcast.id}
-              className="podcast-card-1"
-              onClick={() => handleNewsClick(podcast.id)}
-              style={{ cursor: "pointer" }}
-            >
+            <div key={podcast.id} className="podcast-card-1">
               <img src={podcast.images?.[0]} alt={podcast.title} />
               <div className="podcast-description">
                 <p>{podcast.title}</p>
