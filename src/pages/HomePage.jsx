@@ -51,10 +51,6 @@ const HomePage = () => {
                 onClick={() => handleNewsClick(product.id)}
                 style={{ cursor: "pointer" }}
               >
-                {/* <img
-                  src={product.images?.[0] || NewsCard}
-                  alt={product.title}
-                /> */}
                 <img src={NewsCard} alt="" />
                 <div className="news-content">
                   <h2>{product.title}</h2>
