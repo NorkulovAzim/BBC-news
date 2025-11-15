@@ -41,6 +41,7 @@ const DetailedPage = () => {
         <div className="detailed-title">
           <h1>{product.title}</h1>
           <button onClick={() => addToSaved(product)}>
+            {t("clickToSave")}
             <img src={SavedIcon} alt="" />
           </button>
         </div>

@@ -23,7 +23,7 @@ const SavedPage = () => {
 
   if (savedItems.length === 0) {
     return (
-      <section>
+      <section className="nosaved-section">
         <div className="container">
           <h2>{t("nosaved")}</h2>
         </div>

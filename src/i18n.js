@@ -14,7 +14,7 @@ const resources = {
       science: "Science",
       saved_news: "Saved News",
       copyright: "Copyright © 2024 - The News - All rights reserved",
-      nosaved: "No saved news",
+      nosaved: "No saved news :(",
       saved: "Saved News",
       shortnews: "Short News",
       hotnews: "Latest News",
@@ -25,6 +25,7 @@ const resources = {
       loading: "Loading...",
       savedFull: "Saved News",
       addNews: "News added",
+      clickToSave: "Click to save",
     },
   },
   uz: {
@@ -40,7 +41,7 @@ const resources = {
       saved_news: "Saqlangan yangiliklar",
       copyright:
         "Mualliflik huquqi © 2024 - The News - Barcha huquqlar himoyalangan",
-      nosaved: "Saqlangan yangiliklar yo'q",
+      nosaved: "Saqlangan yangiliklar yo'q :(",
       saved: "Saqlangan yangiliklar",
       shortnews: "Qisqa yangiliklar",
       hotnews: "So'ngi yangiliklar",
@@ -51,6 +52,7 @@ const resources = {
       loading: "Yuklanmoqda...",
       savedFull: "Saqlangan yangiliklar",
       addNews: "Yangilik qo'shilgan",
+      clickToSave: "Saqlash",
     },
   },
   ru: {
@@ -65,7 +67,7 @@ const resources = {
       science: "Наука",
       saved_news: "Сохраненные новости",
       copyright: "Авторские права © 2024 - The News - Все права защищены",
-      nosaved: "Нет сохраненных новостей",
+      nosaved: "Нет сохраненных новостей :(",
       saved: "Сох.. новости",
       shortnews: "Короткие новости",
       hotnews: "последние новости",
@@ -76,6 +78,7 @@ const resources = {
       loading: "Загрузка...",
       savedFull: "Сохраненные новости",
       addNews: "Новости добавлены",
+      clickToSave: "Сохранять",
     },
   },
 };
