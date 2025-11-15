@@ -168,7 +168,7 @@ const HomePage = () => {
         <div className="podcast-line"></div>
 
         <div className="podcast-cards">
-          {products.slice(0, 3).map((podcast) => (
+          {products.slice(0, 2).map((podcast) => (
             <div
               key={podcast.id}
               className="podcast-card-1"
